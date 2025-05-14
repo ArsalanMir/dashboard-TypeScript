@@ -75,10 +75,10 @@ export const resumeCards: ResumeCard[] = [
 ];
 
 export const teachingTools: TeachingTool[] = [
-  { title: 'Curriculum Mapper', category: 'Planning Tools', color: 'bg-yellow-400', icon: "📚" },
-  { title: 'Class Goals Planner', category: 'Planning Tools', color: 'bg-yellow-400', icon: "🎯" },
-  { title: 'Teaching Calendar Planner', category: 'Planning Tools', color: 'bg-yellow-400', icon: "🗓️" },
-  { title: 'Reflection Diary', category: 'Planning Tools', color: 'bg-yellow-400', icon: "🧘" },
+  { title: 'Curriculum Mapper', category: '📘Planning Tools', color: 'bg-yellow-400', icon: "📚" },
+  { title: 'Class Goals Planner', category: '📘Planning Tools', color: 'bg-yellow-400', icon: "🎯" },
+  { title: 'Teaching Calendar Planner', category: '📘Planning Tools', color: 'bg-yellow-400', icon: "🗓️" },
+  { title: 'Reflection Diary', category: '📘Planning Tools', color: 'bg-yellow-400', icon: "🧘" },
 
   { title: 'Lesson Planner', category: 'Instruction Design Tools', color: 'bg-blue-500', icon: "📘" },
   { title: 'Quiz Builder', category: 'Instruction Design Tools', color: 'bg-blue-500', icon: "📝" },
@@ -91,6 +91,6 @@ export const teachingTools: TeachingTool[] = [
   { title: 'Evaluation Assistant', category: 'Assessment Tools', color: 'bg-red-500', icon: <img src={Evaluationimg} alt="Evaluation Assistant" width={20} height={20} /> },
   { title: 'Report Card Generator', category: 'Assessment Tools', color: 'bg-red-500', icon:<img src={Reportimg} alt="Evaluation Assistant" width={20} height={20} /> },
 
-  { title: 'Mnemonic Maker', category: 'Text & Mnemonic-Based Tools', color: 'bg-pink-400', icon: "🧠" },
-  { title: 'Flashcard Generator', category: 'Text & Mnemonic-Based Tools', color: 'bg-pink-400', icon: '🃏'},
+  { title: 'Mnemonic Maker', category: '🔡Text & Mnemonic-Based Tools', color: 'bg-pink-400', icon: "🧠" },
+  { title: 'Flashcard Generator', category: '🔡Text & Mnemonic-Based Tools', color: 'bg-pink-400', icon: '🃏'},
 ];
