@@ -1,7 +1,7 @@
 import Evaluationimg from '../assets/Evaluation.png';
 import AssesGenrator from '../assets/Asses-Generator.png'; 
 import HomeWorkimg from '../assets/Homework.png'; 
-import Reportimg from '../assets/Report-Card.png';
+import Reportimg from '../assets/Report-card.png';
 import type { ReactElement } from 'react';
 
 export interface Assistant {
