@@ -28,7 +28,6 @@ const Calender: React.FC = () => {
     const days = [];
     const totalCells = firstDay + daysInMonth;
     const rows = Math.ceil(totalCells / 6);
-
     let day = 1;
 
     for (let i = 0; i < rows; i++) {
@@ -48,8 +47,21 @@ const Calender: React.FC = () => {
   };
 
   return (
-    <div className="fixed right-0 top-16 h-[calc(100vh-4rem)] w-80 bg-gray-50 shadow-md overflow-hidden z-40">
-      <div className="overflow-y-auto h-full p-4 space-y-6">
+    <div className="fixed right-0 top-16 h-[calc(100vh-4rem)] w-80 bg-gray-50 shadow-md z-40">
+      <div
+        className="h-full p-4 space-y-6 overflow-y-auto scroll-smooth"
+        style={{
+          scrollbarWidth: 'none', // Firefox
+          msOverflowStyle: 'none' // IE/Edge
+        }}
+      >
+        {/* Hide scrollbar in WebKit browsers */}
+        <style>{`
+          div::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
+
         {/* Assistant */}
         <div className="bg-gray-900 text-white rounded-lg p-4 flex flex-col justify-between min-h-[300px]">
           <div>
