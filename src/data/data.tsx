@@ -1,7 +1,8 @@
-import image1 from '../assets/images/Evaluation.png';
-import image2 from '../assets/images/Asses-Generator.png'; 
-import Image from '../assets/Homework.png'; 
-import image3 from '../assets/images/Report-Card.png';
+import Evaluationimg from '../assets/Evaluation.png';
+import AssesGenrator from '../assets/Asses-Generator.png'; 
+import HomeWorkimg from '../assets/Homework.png'; 
+import Reportimg from '../assets/Report-Card.png';
+import type { ReactElement } from 'react';
 
 export interface Assistant {
   icon: string;
@@ -19,11 +20,8 @@ export interface TeachingTool {
   title: string;
   category: string;
   color: string;
-  icon: string;
+  icon: string | ReactElement;
 }
-
-
-
 
 export const assistants: Assistant[] = [
   { 
@@ -85,13 +83,13 @@ export const teachingTools: TeachingTool[] = [
   { title: 'Lesson Planner', category: 'Instruction Design Tools', color: 'bg-blue-500', icon: "📘" },
   { title: 'Quiz Builder', category: 'Instruction Design Tools', color: 'bg-blue-500', icon: "📝" },
   { title: 'Worksheet Generator', category: 'Instruction Design Tools', color: 'bg-blue-500', icon: "📄" },
-  { title: 'Homework Creator', category: 'Instruction Design Tools', color: 'bg-blue-500', icon: <Image src={Image} alt="Evaluation Assistant" width={20} height={20} /> },
+  { title: 'Homework Creator', category: 'Instruction Design Tools', color: 'bg-blue-500', icon: <img src={HomeWorkimg} alt="Evaluation Assistant" width={20} height={20} /> },
   { title: 'Assignment Designer', category: 'Instruction Design Tools', color: 'bg-blue-500', icon:"📊" },
 
   { title: 'Assignment Designer', category: 'Assessment Tools', color: 'bg-red-500', icon: '📊' },
-  { title: 'Assessment Generator', category: 'Assessment Tools', color: 'bg-red-500', icon: <Image src={image2} alt="Assessment Generator" width={20} height={20} /> },
-  { title: 'Evaluation Assistant', category: 'Assessment Tools', color: 'bg-red-500', icon: <Image src={image1} alt="Evaluation Assistant" width={20} height={20} /> },
-  { title: 'Report Card Generator', category: 'Assessment Tools', color: 'bg-red-500', icon:<Image src={image3} alt="Evaluation Assistant" width={20} height={20} /> },
+  { title: 'Assessment Generator', category: 'Assessment Tools', color: 'bg-red-500', icon: <img src={AssesGenrator} alt="Assessment Generator" width={20} height={20} /> },
+  { title: 'Evaluation Assistant', category: 'Assessment Tools', color: 'bg-red-500', icon: <img src={Evaluationimg} alt="Evaluation Assistant" width={20} height={20} /> },
+  { title: 'Report Card Generator', category: 'Assessment Tools', color: 'bg-red-500', icon:<img src={Reportimg} alt="Evaluation Assistant" width={20} height={20} /> },
 
   { title: 'Mnemonic Maker', category: 'Text & Mnemonic-Based Tools', color: 'bg-pink-400', icon: "🧠" },
   { title: 'Flashcard Generator', category: 'Text & Mnemonic-Based Tools', color: 'bg-pink-400', icon: '🃏'},

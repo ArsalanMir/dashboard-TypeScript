@@ -9,6 +9,7 @@ import {
   FaYoutube
 } from "react-icons/fa";
 import { AiFillProfile } from "react-icons/ai";
+import yolearn from "../assets/yolearnlogo.png";
 
 const LeftSidebar: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -94,9 +95,7 @@ const LeftSidebar: React.FC = () => {
               {isHovered && (
                 <>
                   <p className="flex items-center space-x-2">
-                    <span className="font-bold text-2xl text-black">
-                      YoLearn.ai
-                    </span>
+                    <img src={yolearn} alt="YoLearn.ai Logo" className="h-10 w-auto" />
                   </p>
                   <p className="flex items-center space-x-2">
                     <FiMail size={12} />
