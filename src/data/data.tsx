@@ -15,7 +15,9 @@ export interface TeachingTool {
   title: string;
   category: string;
   color: string;
+  icon: JSX.Element;
 }
+
 
 
 export const assistants: Assistant[] = [
@@ -53,7 +55,7 @@ export const assistants: Assistant[] = [
 
 export const resumeCards: ResumeCard[] = [
   {
-    icon: '🔬',
+    icon: '📚',
     title: 'CONTINUE WORKING ON GRADE 6 SCIENCE LESSON?',
     subtitle: 'Last opened: Worksheet Builder · 2 days ago',
   },
@@ -63,86 +65,43 @@ export const resumeCards: ResumeCard[] = [
     subtitle: 'Last opened: Avatar Hub · 3 days ago',
   },
   {
-    icon: '⚗️',
+    icon: '🎨',
     title: 'CONTINUE CREATING GRADE 7 CHEMISTRY EXPERIMENT?',
     subtitle: 'Last opened: Content Lab · 4 days ago',
   },
 ];
 
+import {
+  FiMap,
+  FiTarget,
+  FiCalendar,
+  FiBookOpen,
+  FiEdit3,
+  FiFileText,
+  FiCheckCircle,
+  FiClipboard,
+  FiAward,
+  FiBarChart2,
+  FiLayers,
+} from "react-icons/fi";
+
 export const teachingTools: TeachingTool[] = [
-  { 
-    title: 'Curriculum Mapper', 
-    category: 'Planning Tools', 
-    color: 'bg-yellow-400' 
-  },
-  { 
-    title: 'Class Goals Planner', 
-    category: 'Planning Tools', 
-    color: 'bg-yellow-400' 
-  },
-  { 
-    title: 'Teaching Calendar Planner', 
-    category: 'Planning Tools', 
-    color: 'bg-yellow-400' 
-  },
-  { 
-    title: 'Reflection Diary', 
-    category: 'Planning Tools', 
-    color: 'bg-yellow-400' 
-  },
-  { 
-    title: 'Lesson Planner', 
-    category: 'Instruction Design Tools', 
-    color: 'bg-blue-500' 
-  },
-  { 
-    title: 'Quiz Builder', 
-    category: 'Instruction Design Tools', 
-    color: 'bg-blue-500' 
-  },
-  { 
-    title: 'Worksheet Generator', 
-    category: 'Instruction Design Tools', 
-    color: 'bg-blue-500' 
-  },
-  { 
-    title: 'Homework Creator', 
-    category: 'Instruction Design Tools', 
-    color: 'bg-blue-500' 
-  },
-  { 
-    title: 'Assignment Designer', 
-    category: 'Instruction Design Tools', 
-    color: 'bg-blue-500' 
-  },
-  { 
-    title: 'Assignment Designer', 
-    category: 'Assessment Tools', 
-    color: 'bg-red-500' 
-  },
-  { 
-    title: 'Assessment Generator', 
-    category: 'Assessment Tools', 
-    color: 'bg-red-500' 
-  },
-  { 
-    title: 'Evaluation Assistant', 
-    category: 'Assessment Tools', 
-    color: 'bg-red-500' 
-  },
-  { 
-    title: 'Report Card Generator', 
-    category: 'Assessment Tools', 
-    color: 'bg-red-500' 
-  },
-  { 
-    title: 'Mnemonic Maker', 
-    category: 'Text & Mnemonic-Based Tools', 
-    color: 'bg-pink-400' 
-  },
-  { 
-    title: 'Flashcard Generator', 
-    category: 'Text & Mnemonic-Based Tools', 
-    color: 'bg-pink-400' 
-  },
+  { title: 'Curriculum Mapper', category: 'Planning Tools', color: 'bg-yellow-400', icon: <FiMap /> },
+  { title: 'Class Goals Planner', category: 'Planning Tools', color: 'bg-yellow-400', icon: <FiTarget /> },
+  { title: 'Teaching Calendar Planner', category: 'Planning Tools', color: 'bg-yellow-400', icon: <FiCalendar /> },
+  { title: 'Reflection Diary', category: 'Planning Tools', color: 'bg-yellow-400', icon: <FiBookOpen /> },
+
+  { title: 'Lesson Planner', category: 'Instruction Design Tools', color: 'bg-blue-500', icon: <FiEdit3 /> },
+  { title: 'Quiz Builder', category: 'Instruction Design Tools', color: 'bg-blue-500', icon: <FiFileText /> },
+  { title: 'Worksheet Generator', category: 'Instruction Design Tools', color: 'bg-blue-500', icon: <FiClipboard /> },
+  { title: 'Homework Creator', category: 'Instruction Design Tools', color: 'bg-blue-500', icon: <FiCheckCircle /> },
+  { title: 'Assignment Designer', category: 'Instruction Design Tools', color: 'bg-blue-500', icon: <FiLayers /> },
+
+  { title: 'Assignment Designer', category: 'Assessment Tools', color: 'bg-red-500', icon: <FiLayers /> },
+  { title: 'Assessment Generator', category: 'Assessment Tools', color: 'bg-red-500', icon: <FiFileText /> },
+  { title: 'Evaluation Assistant', category: 'Assessment Tools', color: 'bg-red-500', icon: <FiCheckCircle /> },
+  { title: 'Report Card Generator', category: 'Assessment Tools', color: 'bg-red-500', icon: <FiAward /> },
+
+  { title: 'Mnemonic Maker', category: 'Text & Mnemonic-Based Tools', color: 'bg-pink-400', icon: <FiBookOpen /> },
+  { title: 'Flashcard Generator', category: 'Text & Mnemonic-Based Tools', color: 'bg-pink-400', icon: <FiClipboard /> },
 ];
