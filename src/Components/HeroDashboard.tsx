@@ -43,21 +43,25 @@ const HeroDashboard: React.FC = () => {
         `}</style>
 
         {/* Hero Section */}
-        <div className="rounded-xl bg-gradient-to-r from-[#3CA4F7] to-[#4F6CE1] text-white p-8 relative flex flex-col items-center">
-          <h1 className="text-3xl font-bold mb-6 text-center">
+        <div className="rounded-xl bg-gradient-to-r from-[#3CA4F7] to-[#4F6CE1] text-white px-4 py-8 sm:p-8 relative flex flex-col items-center">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-center">
             What will you teach today?
           </h1>
-          <div className="w-full max-w-xl bg-white text-gray-800 rounded-full flex items-center px-4 py-2 shadow-md">
+
+          {/* Input Box */}
+          <div className="w-full max-w-md sm:max-w-xl bg-white text-gray-800 rounded-full flex items-center px-3 py-2 sm:px-4 sm:py-2 shadow-md">
             <input
               type="text"
               placeholder="Ask Yo to create a quiz on..."
               className="flex-1 bg-transparent outline-none text-sm px-2"
             />
-            <FiMic className="text-gray-500 mr-2" />
+            <FiMic className="text-gray-500 mr-2 hidden sm:block" />
             <button className="bg-gray-100 text-sm text-gray-700 px-2 py-1 rounded-full">
               🎤
             </button>
           </div>
+
+          {/* Tags */}
           <div className="mt-4 flex flex-wrap gap-2 justify-center">
             {["Lesson Plan", "Worksheet", "PD Goal"].map((tag, idx) => (
               <button
@@ -72,13 +76,13 @@ const HeroDashboard: React.FC = () => {
         </div>
 
         {/* Workspace Quick Launch */}
-        <div className="relative">
-          <h2 className="text-lg font-semibold mb-4">
+        <div className="relative px-4 sm:px-0 mt-6">
+          <h2 className="text-base sm:text-lg font-semibold mb-4">
             🧩 Workspace Quick Launch
           </h2>
 
-          {/* Cards grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-1">
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-3">
             {[
               {
                 title: "🧠 Planning Studio",
@@ -128,19 +132,13 @@ const HeroDashboard: React.FC = () => {
             ))}
           </div>
 
-          {/* Ultra-compact slider controls at bottom left */}
-          <div className="flex flex-col items-start space-y-1">
-            {/* Tiny dots indicator above arrows */}
-            <div className="flex space-x-1 mb-2 ml-3 mt-2">
+          {/* Slider Controls */}
+          <div className="flex flex-col items-start space-y-1 sm:ml-2 mt-2">
+            <div className="flex space-x-1 mb-2 ml-2">
               {[1, 2, 3].map((dot) => (
-                <div
-                  key={dot}
-                  className="w-1 h-1 rounded-full bg-blue-400"
-                ></div>
+                <div key={dot} className="w-1 h-1 rounded-full bg-blue-400" />
               ))}
             </div>
-
-            {/* Mini arrow buttons */}
             <div className="flex space-x-1">
               <button className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-200">
                 <svg
@@ -173,6 +171,7 @@ const HeroDashboard: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Smart Start Guides */}
         <div className="relative">
           <h2 className="text-lg font-semibold mb-4">📘 Smart Start Guides</h2>
@@ -195,15 +194,15 @@ const HeroDashboard: React.FC = () => {
             ].map((guide, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow"
+                className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow flex flex-col"
               >
                 <img
                   src={guide.image}
                   alt="Guide thumbnail"
-                  className="w-full h-36 object-cover"
+                  className="w-full h-40 object-cover"
                 />
-                <div className="p-4">
-                  <button className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full mb-2">
+                <div className="p-4 flex flex-col flex-grow">
+                  <button className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full mb-2 w-max">
                     Learn
                   </button>
                   <h3 className="text-sm font-medium">{guide.title}</h3>
@@ -213,9 +212,9 @@ const HeroDashboard: React.FC = () => {
           </div>
 
           {/* Mini slider controls */}
-          <div className="flex flex-col items-start mt-2">
-            {/* Tiny dots above arrows */}
-            <div className="flex space-x-1 mb-2 ml-3 mt-2">
+          <div className="flex flex-col items-start mt-4 sm:mt-3">
+            {/* Dots */}
+            <div className="flex space-x-1 mb-2 ml-2">
               {[1, 2, 3].map((dot) => (
                 <div
                   key={dot}
@@ -224,12 +223,12 @@ const HeroDashboard: React.FC = () => {
               ))}
             </div>
 
-            {/* Small navigation arrows */}
+            {/* Arrows */}
             <div className="flex space-x-1">
-              <button className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-200">
+              <button className="w-6 h-6 sm:w-5 sm:h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-2.5 w-2.5"
+                  className="h-3 w-3"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -240,10 +239,10 @@ const HeroDashboard: React.FC = () => {
                   />
                 </svg>
               </button>
-              <button className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-200">
+              <button className="w-6 h-6 sm:w-5 sm:h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-2.5 w-2.5"
+                  className="h-3 w-3"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -259,7 +258,7 @@ const HeroDashboard: React.FC = () => {
         </div>
 
         {/* AI Teaching Assistants Section */}
-        <div>
+        <div className="mt-6">
           <h2 className="text-lg font-bold mb-4">
             🤖 AI Teaching Assistants — Meet the Team
           </h2>
@@ -267,10 +266,10 @@ const HeroDashboard: React.FC = () => {
             {assistants.map((assistant, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl p-4 shadow-sm text-sm space-y-2"
+                className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow text-sm space-y-2"
               >
                 <div className="text-2xl">{assistant.icon}</div>
-                <h3 className="font-semibold">{assistant.title}</h3>
+                <h3 className="font-semibold text-base">{assistant.title}</h3>
                 <p className="text-gray-600 text-xs">{assistant.desc}</p>
               </div>
             ))}
@@ -278,9 +277,7 @@ const HeroDashboard: React.FC = () => {
         </div>
 
         {/* Resume Where You Left Off */}
-        <div className="mt-6">
-          {" "}
-          {/* Added margin-top for separation */}
+        <div className="mt-8">
           <h2 className="text-lg font-bold mb-4">
             📌 Resume Where You Left Off
           </h2>
@@ -288,7 +285,7 @@ const HeroDashboard: React.FC = () => {
             {resumeCards.map((card, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl p-4 shadow-sm space-y-2"
+                className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow space-y-2"
               >
                 <div className="text-2xl">{card.icon}</div>
                 <h3 className="font-semibold text-sm">{card.title}</h3>
@@ -299,8 +296,8 @@ const HeroDashboard: React.FC = () => {
         </div>
 
         {/* Analytics Snapshot */}
-        <div className="relative">
-          <h2 className="text-lg font-sbold mb-4">🧠 Analytics Snapshot</h2>
+        <div className="relative mt-8">
+          <h2 className="text-lg font-bold mb-4">🧠 Analytics Snapshot</h2>
 
           {/* Analytics Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-1">
@@ -373,7 +370,7 @@ const HeroDashboard: React.FC = () => {
                 alt="Student Progress Graph"
                 className="w-full h-28 object-contain"
               />
-              <div className="flex justify-center text-xs mt-2 text-gray-500">
+              <div className="flex justify-center text-xs mt-2 text-gray-500 space-x-4">
                 <span>🟢 Below average</span>
                 <span>🔵 Above average</span>
               </div>
@@ -381,31 +378,25 @@ const HeroDashboard: React.FC = () => {
 
             {/* Total Students */}
             <div className="bg-white p-4 rounded-xl shadow-sm flex flex-col justify-between">
-              {" "}
-              {/* Removed border */}
               <div>
                 <h3 className="text-sm font-semibold mb-2">
                   📊 Total Students
                 </h3>
-                <p className="text-2xl font-bold">40,689</p>{" "}
-                {/* Reduced size */}
+                <p className="text-2xl font-bold">40,689</p>
                 <p className="text-xs text-green-500 mt-1">
-                  {" "}
-                  {/* Reduced size */}▲ 8.5% Up from yesterday
+                  ▲ 8.5% Up from yesterday
                 </p>
               </div>
-              <button className="mt-3 bg-[#4F6CE1] text-white text-xs py-1.5 px-3 rounded-full hover:bg-[#3a58cc] transition">
-                {" "}
-                {/* Smaller button */}
+              <button className="mt-4 bg-[#4F6CE1] text-white text-xs py-1.5 px-3 rounded-full hover:bg-[#3a58cc] transition">
                 Check performance
               </button>
             </div>
           </div>
 
           {/* Mini slider controls - bottom left */}
-          <div className="flex flex-col items-start mt-2">
-            {/* Tiny dots above arrows */}
-            <div className="flex space-x-1 mb-2 ml-3 mt-2">
+          <div className="flex flex-col items-start mt-2 ml-1">
+            {/* Dots */}
+            <div className="flex space-x-1 mb-2 ml-2">
               {[1, 2, 3].map((dot) => (
                 <div
                   key={dot}
@@ -414,7 +405,7 @@ const HeroDashboard: React.FC = () => {
               ))}
             </div>
 
-            {/* Small navigation arrows */}
+            {/* Arrows */}
             <div className="flex space-x-1">
               <button className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-200">
                 <svg
@@ -449,17 +440,33 @@ const HeroDashboard: React.FC = () => {
         </div>
 
         {/* All Tools Section */}
-        <div>
+        <div className="px-4">
           <h2 className="text-lg font-semibold mb-4">🧰 All Tools</h2>
 
-          {/* Search Bar */}
-          <div className="mb-4">
+          {/* Search Bar with Icon */}
+          <div className="mb-4 relative max-w-full sm:max-w-md">
+            <span className="absolute inset-y-0 left-3 flex items-center text-gray-400">
+              <svg
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"
+                ></path>
+              </svg>
+            </span>
             <input
               type="text"
               placeholder="Search for tools..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full sm:w-96 px-4 py-2 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
             />
           </div>
 
@@ -480,7 +487,7 @@ const HeroDashboard: React.FC = () => {
                 className={`text-sm px-4 py-2 rounded-full shadow-sm ${
                   activeFilter === filter
                     ? "bg-blue-600 text-white"
-                    : " hover:bg-gray-200 text-black font-bold"
+                    : "hover:bg-gray-200 text-black font-bold"
                 }`}
               >
                 {filter}
@@ -490,44 +497,44 @@ const HeroDashboard: React.FC = () => {
 
           {/* Tool Cards Grid */}
           <div className="relative">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3">
               {filteredTools.map((tool, idx) => (
                 <div
                   key={idx}
-                  className="bg-white p-3 rounded-xl shadow-sm flex flex-col justify-between relative"
+                  className="bg-white p-2 rounded-lg shadow-sm flex flex-col justify-between relative"
                 >
-                  {/* Wishlist Heart Button  */}
+                  {/* Wishlist Heart Button */}
                   <button
                     onClick={() => toggleWishlist(tool.title)}
                     className="absolute top-2 right-2 text-blue-500"
                   >
                     {wishlist.includes(tool.title) ? (
-                      <AiFillHeart className="text-blue-500 text-lg" />
+                      <AiFillHeart className="text-blue-500 text-base" />
                     ) : (
-                      <AiOutlineHeart className="text-blue-500 text-lg" />
+                      <AiOutlineHeart className="text-blue-500 text-base" />
                     )}
                   </button>
 
-                  {/* Content in Exact Order: Icon → Color Badge → Title */}
-                  <div className="mb-3">
-                    {/* 1. Icon */}
-                    <div className="text-4xl text-gray-700 mb-2">
+                  {/* Content: Icon → Badge → Title */}
+                  <div className="mb-2">
+                    {/* Smaller Icon */}
+                    <div className="text-2xl text-gray-700 mb-1">
                       {tool.icon}
                     </div>
 
-                    {/* 2. Color Badge */}
+                    {/* Smaller Badge */}
                     <span
-                      className={`text-black text-1xl px-2 py-1 rounded-full mb-2 inline-block  ${tool.color}`}
+                      className={`text-black text-xs px-2 py-0.5 rounded-full inline-block mb-1 ${tool.color}`}
                     >
                       {tool.category}
                     </span>
 
-                    {/* 3. Title Below */}
-                    <h3 className="font-bold text-xl">{tool.title}</h3>
+                    {/* Smaller Title */}
+                    <h3 className="font-semibold text-sm">{tool.title}</h3>
                   </div>
 
-                  {/* Start Button (unchanged) */}
-                  <div className="mt-3 text-right">
+                  {/* Start Button */}
+                  <div className="mt-2 text-right">
                     <button className="text-blue-600 text-xs hover:underline flex items-center justify-end w-full">
                       Start
                       <svg
