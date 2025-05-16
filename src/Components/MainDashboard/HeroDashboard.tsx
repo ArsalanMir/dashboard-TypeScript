@@ -304,7 +304,8 @@ const HeroDashboard: React.FC = () => {
             {/* Student Engagement */}
             <div className="bg-[#F9FBFD] p-4 rounded-xl shadow-sm">
               <h3 className="text-sm font-semibold text-[#0F3C60] mb-4 flex items-center gap-1">
-                <svg                  className="w-4 h-4 text-[#0F3C60]"
+                <svg
+                  className="w-4 h-4 text-[#0F3C60]"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -329,30 +330,36 @@ const HeroDashboard: React.FC = () => {
                 </div>
 
                 {/* Right: Donut Chart */}
-                <div className="w-24 h-24">
+                <div className="w-28 h-28 relative">
                   <svg
                     viewBox="0 0 36 36"
-                    className="w-full h-full transform -rotate-90"
+                    className="w-full h-full transform rotate-180"
                   >
                     <circle cx="18" cy="18" r="16" fill="#F4F7FA" />
-                    {/* Teal - 20% */}
-                    <path
-                      fill="transparent"
+
+                    {/* Teal segment - 20% - larger version */}
+                    <circle
+                      cx="18"
+                      cy="18"
+                      r="11"
+                      fill="none"
                       stroke="#2DD4BF"
-                      strokeWidth="10"
-                      strokeDasharray="20, 100"
+                      strokeWidth="6"
+                      strokeDasharray="20 100"
                       strokeLinecap="round"
-                      d="M18 2 a 16 16 0 0 1 0 32 a 16 16 0 0 1 0 -32"
                     />
-                    {/* Blue - 80% */}
-                    <path
-                      fill="transparent"
+
+                    {/* Blue segment - 80% - larger version */}
+                    <circle
+                      cx="18"
+                      cy="18"
+                      r="11"
+                      fill="none"
                       stroke="#3B82F6"
-                      strokeWidth="10"
-                      strokeDasharray="80, 100"
+                      strokeWidth="6"
+                      strokeDasharray="80 100"
                       strokeDashoffset="-20"
                       strokeLinecap="round"
-                      d="M18 2 a 16 16 0 0 1 0 32 a 16 16 0 0 1 0 -32"
                     />
                   </svg>
                 </div>
