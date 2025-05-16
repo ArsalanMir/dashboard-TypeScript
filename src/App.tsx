@@ -1,41 +1,27 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Calender from './Components/Calender';
-import Header from './Components/Header';
-import HeroDashboard from './Components/HeroDashboard';
-import LeftSidebar from './Components/LeftSidebar';
-
-import { useState } from 'react';
+import DashboardTeacher from './pages/DashboardTeacher';
+import ContentTeacher from './pages/ContentTeacher';
+import Planning from './pages/Planning';
+import CommandDesk from './pages/CommandDesk';
+import TeachingStudio from './pages/TeachingStudio';
+import Growth from './pages/Growth';
 
 function App() {
-  const [sidebarExpanded, setSidebarExpanded] = useState(false);
 
   return (
-    <div className="h-screen w-screen overflow-hidden flex flex-col">
-      {/* Fixed Header */}
-      <Header />
-
-      {/* Main Layout */}
-      <div className="flex flex-1 pt-16 overflow-hidden">
-        {/* Left Sidebar with dynamic width */}
-        <div
-          onMouseEnter={() => setSidebarExpanded(true)}
-          onMouseLeave={() => setSidebarExpanded(false)}
-          className={`transition-all duration-300 ${sidebarExpanded ? 'w-64' : 'w-16'}`}
-        >
-          <LeftSidebar />
-        </div>
-
-        {/* Main Content shifts based on sidebar */}
-        <main className="flex-1 overflow-y-auto bg-[#F9FBFF] p-4 transition-all duration-300">
-          <HeroDashboard />
-        </main>
-
-        {/* Fixed Calendar Panel */}
-        <div className="w-80 bg-white shadow-md border-l h-[calc(100vh-4rem)] overflow-y-auto">
-          <Calender />
-        </div>
-      </div>
-    </div>
+   <>
+   <Routes>
+      <Route path="/" element={<DashboardTeacher />} />
+      <Route path="/content" element={<ContentTeacher />} />
+      <Route path="/planning" element={<Planning />} />
+      <Route path="/command" element={<CommandDesk />} />
+      <Route path="/studio" element={<TeachingStudio />} />
+      <Route path="/growth" element={<Growth />} />
+      {/* <Route path="*" element={<NotFound />} /> */}
+    </Routes>
+   
+   </>
   );
 }
 

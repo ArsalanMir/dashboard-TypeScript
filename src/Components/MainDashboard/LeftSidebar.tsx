@@ -9,7 +9,7 @@ import {
   FaYoutube
 } from "react-icons/fa";
 import { AiFillProfile } from "react-icons/ai";
-import yolearn from "../assets/yolearnlogo.png";
+import yolearn from "../../assets/yolearnlogo.png";
 
 const LeftSidebar: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);

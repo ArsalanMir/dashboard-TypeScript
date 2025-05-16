@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from "react";
 import { FiMic, FiChevronDown } from "react-icons/fi";
-import { assistants, resumeCards, teachingTools } from "../data/data";
-import image1 from "../assets/image1.png";
-import graph from "../assets/graph.png";
+import { assistants, resumeCards, teachingTools } from "../../data/data";
+import image1 from "../../assets/image1.png";
+import graph from "../../assets/graph.png";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 const HeroDashboard: React.FC = () => {
@@ -304,8 +304,7 @@ const HeroDashboard: React.FC = () => {
             {/* Student Engagement */}
             <div className="bg-[#F9FBFD] p-4 rounded-xl shadow-sm">
               <h3 className="text-sm font-semibold text-[#0F3C60] mb-4 flex items-center gap-1">
-                <svg
-                  className="w-4 h-4 text-[#0F3C60]"
+                <svg                  className="w-4 h-4 text-[#0F3C60]"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >

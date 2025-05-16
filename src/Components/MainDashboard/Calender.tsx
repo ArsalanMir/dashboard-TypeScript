@@ -4,7 +4,6 @@ import {
   FiChevronLeft,
   FiChevronRight,
   FiArrowRight,
-  FiAlertCircle,
 } from "react-icons/fi";
 
 const Calender: React.FC = () => {
@@ -199,7 +198,7 @@ const Calender: React.FC = () => {
         </div>
         <div className="bg-white p-3 rounded shadow-sm">
           <p className="text-sm text-gray-800 flex items-start">
-            <FiAlertCircle className="text-yellow-500 mr-2 mt-0.5" />
+            <span className="text-yellow-500 mr-2 mt-0.5" >💡</span>
             Time to assess Class 7B?
           </p>
           <button className="text-xs text-blue-500 mt-2 flex items-center">

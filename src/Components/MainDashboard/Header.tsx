@@ -1,6 +1,6 @@
 import React from "react";
 import { FiMoon, FiBell } from "react-icons/fi";
-import yolearnLogo from "../assets/Yolearn.png";
+import yolearnLogo from "../../assets/Yolearn.png";
 
 const Header: React.FC = () => {
   return (
